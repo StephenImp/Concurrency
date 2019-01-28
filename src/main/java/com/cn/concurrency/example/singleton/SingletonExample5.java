@@ -5,6 +5,9 @@ import com.cn.concurrency.annoations.ThreadSafe;
 /**
  * 懒汉模式 -》 双重同步锁单例模式
  * 单例实例在第一次使用时进行创建
+ *
+ * volatile  解决指令重拍问题
+ *              doubleCheck
  */
 @ThreadSafe
 public class SingletonExample5 {
@@ -23,6 +26,7 @@ public class SingletonExample5 {
 
     // 静态的工厂方法
     public static SingletonExample5 getInstance() {
+
         if (instance == null) { // 双重检测机制        // B
             synchronized (SingletonExample5.class) { // 同步锁
                 if (instance == null) {

@@ -5,8 +5,15 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.cn.concurrency.annoations.ThreadSafe;
 
+
+/**
+ * 定义不可变对象 方式③
+ *
+ *  ImmutableMap
+ */
 @ThreadSafe
 public class ImmutableExample3 {
+
 
     private final static ImmutableList<Integer> list = ImmutableList.of(1, 2, 3);
 
@@ -19,6 +26,8 @@ public class ImmutableExample3 {
 
 
     public static void main(String[] args) {
-        System.out.println(map2.get(3));
+
+        System.out.println(map.get(3));
+
     }
 }

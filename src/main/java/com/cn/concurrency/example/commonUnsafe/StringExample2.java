@@ -8,6 +8,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
+
+/**
+ * StringBuffer
+ */
 @Slf4j
 @ThreadSafe
 public class StringExample2 {
@@ -18,6 +22,13 @@ public class StringExample2 {
     // 同时并发执行的线程数
     public static int threadTotal = 200;
 
+    /**
+     * 之所以线程安全，是因为 synchronized 关键字吧
+     *
+     * synchronized  就会导致性能上的效率相对较低。
+     *
+     *
+     */
     public static StringBuffer stringBuffer = new StringBuffer();
 
     public static void main(String[] args) throws Exception {

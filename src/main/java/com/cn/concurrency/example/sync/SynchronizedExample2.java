@@ -8,7 +8,10 @@ import java.util.concurrent.Executors;
 @Slf4j
 public class SynchronizedExample2 {
 
-    // 修饰一个类
+    /**
+     *  修饰一个类
+     * 锁住的是这个类的所有的实例。
+     */
     public static void test1(int j) {
         synchronized (SynchronizedExample2.class) {
             for (int i = 0; i < 10; i++) {
@@ -25,14 +28,15 @@ public class SynchronizedExample2 {
     }
 
     public static void main(String[] args) {
+
         SynchronizedExample2 example1 = new SynchronizedExample2();
         SynchronizedExample2 example2 = new SynchronizedExample2();
         ExecutorService executorService = Executors.newCachedThreadPool();
         executorService.execute(() -> {
-            example1.test1(1);
+            example1.test2(1);
         });
         executorService.execute(() -> {
-            example2.test1(2);
+            example2.test2(2);
         });
     }
 }

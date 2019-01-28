@@ -7,10 +7,20 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 import java.util.concurrent.atomic.AtomicReference;
 
+
+/**
+ * AtomicIntegerFieldUpdater
+ *
+ * 更新某一个类中 指定字段的值
+ */
 @Slf4j
 @ThreadSafe
 public class AtomicExample5 {
 
+
+    /**
+     * 这个count  必须用  volatile  修饰 ,非 static
+     */
     private static AtomicIntegerFieldUpdater<AtomicExample5> updater =
             AtomicIntegerFieldUpdater.newUpdater(AtomicExample5.class, "count");
 

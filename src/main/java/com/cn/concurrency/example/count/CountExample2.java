@@ -43,6 +43,8 @@ public class CountExample2 {
     }
 
     private static void add() {
+
+        //这里使用的是CAS算法。看源码   compareAndSwapInt
         count.incrementAndGet();
         // count.getAndIncrement();
     }

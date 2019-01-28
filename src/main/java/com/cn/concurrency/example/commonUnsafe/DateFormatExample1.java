@@ -9,6 +9,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
+/**
+ * SimpleDateFormat
+ *
+ * 不是线程安全的，不能被多个线程共享使用。
+ */
 @Slf4j
 @NotThreadSafe
 public class DateFormatExample1 {

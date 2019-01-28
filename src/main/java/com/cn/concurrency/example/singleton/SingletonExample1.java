@@ -5,6 +5,8 @@ import com.cn.concurrency.annoations.NotThreadSafe;
 /**
  * 懒汉模式
  * 单例实例在第一次使用时进行创建
+ *
+ * 线程不安全的
  */
 @NotThreadSafe
 public class SingletonExample1 {

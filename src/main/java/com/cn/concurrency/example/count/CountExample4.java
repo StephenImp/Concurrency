@@ -8,6 +8,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
+
+/**
+ * volatile  不能保证线程安全
+ */
 @Slf4j
 @NotThreadSafe
 public class CountExample4 {
@@ -43,8 +47,17 @@ public class CountExample4 {
 
     private static void add() {
         count++;
-        // 1、count
-        // 2、+1
-        // 3、count
+
+        // ① count
+        // ② +1
+        // ③ count
+
+        /**
+         * 两个线程，同时拿到最新值 ①
+         * 两个线程又同时加1  ②
+         * 两个线程又同时写回主存 ③
+         *
+         * 这时，就会有一次计数重复，导致最后的结果不正确
+         */
     }
 }

@@ -9,6 +9,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/**
+ * AtomicBoolean
+ */
 @Slf4j
 @ThreadSafe
 public class AtomicExample6 {
@@ -43,8 +46,11 @@ public class AtomicExample6 {
     }
 
     private static void test() {
+
+        int i = 0;
+
         if (isHappened.compareAndSet(false, true)) {
-            log.info("execute");
+            log.info("execute"+ i++);
         }
     }
 }

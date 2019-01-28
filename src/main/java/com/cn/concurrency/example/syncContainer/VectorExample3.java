@@ -3,6 +3,11 @@ package com.cn.concurrency.example.syncContainer;
 import java.util.Iterator;
 import java.util.Vector;
 
+/**
+ * 在遍历的过程中，尽量不要做remove操作
+ *
+ * 尽量把两个动作分开。
+ */
 public class VectorExample3 {
 
     // java.util.ConcurrentModificationException
@@ -27,6 +32,7 @@ public class VectorExample3 {
 
     // success
     private static void test3(Vector<Integer> v1) { // for
+
         for (int i = 0; i < v1.size(); i++) {
             if (v1.get(i).equals(3)) {
                 v1.remove(i);

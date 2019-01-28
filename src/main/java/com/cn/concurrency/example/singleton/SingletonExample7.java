@@ -20,6 +20,7 @@ public class SingletonExample7 {
     }
 
     private enum Singleton {
+
         INSTANCE;
 
         private SingletonExample7 singleton;

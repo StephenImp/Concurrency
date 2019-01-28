@@ -11,6 +11,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
+/**
+ * joda.time
+ */
 @Slf4j
 @ThreadSafe
 public class DateFormatExample3 {
@@ -24,9 +27,11 @@ public class DateFormatExample3 {
     private static DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern("yyyyMMdd");
 
     public static void main(String[] args) throws Exception {
+
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
+
         for (int i = 0; i < clientTotal; i++) {
             final int count = i;
             executorService.execute(() -> {

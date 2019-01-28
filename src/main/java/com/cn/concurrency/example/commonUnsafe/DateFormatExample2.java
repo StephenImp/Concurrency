@@ -9,6 +9,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
+
+/**
+ * SimpleDateFormat
+ *
+ * 如果是局部变量的话，是线程封闭的，所以是安全的。
+ */
 @Slf4j
 @ThreadSafe
 public class DateFormatExample2 {
@@ -41,6 +47,10 @@ public class DateFormatExample2 {
 
     private static void update() {
         try {
+
+            /**
+             * 如果是局部变量的话，是线程封闭的，所以是安全的。
+             */
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
             simpleDateFormat.parse("20180208");
         } catch (Exception e) {

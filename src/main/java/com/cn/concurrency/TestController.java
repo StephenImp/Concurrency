@@ -12,6 +12,9 @@ public class TestController {
     @RequestMapping("/test")
     @ResponseBody
     public String test() {
+
+        log.info("@@@");
+
         return "test";
     }
 }

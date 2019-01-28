@@ -23,6 +23,7 @@ public class VectorExample1 {
     private static List<Integer> list = new Vector<>();
 
     public static void main(String[] args) throws Exception {
+
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);

@@ -6,6 +6,10 @@ import com.cn.concurrency.annoations.ThreadSafe;
 /**
  * 懒汉模式
  * 单例实例在第一次使用时进行创建
+ *
+ * 线程安全的
+ *
+ * 性能低下，不推荐
  */
 @ThreadSafe
 @NotRecommend

@@ -5,6 +5,8 @@ import com.cn.concurrency.annoations.ThreadSafe;
 /**
  * 饿汉模式
  * 单例实例在类装载时进行创建
+ *
+ * 使用静态块  初始化
  */
 @ThreadSafe
 public class SingletonExample6 {

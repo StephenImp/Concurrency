@@ -1,4 +1,4 @@
-package com.cn.concurrency;
+package com.cn.concurrency.example.threadLocal;
 
 import com.cn.concurrency.example.threadLocal.RequestHolder;
 import lombok.extern.slf4j.Slf4j;
@@ -7,6 +7,9 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * 自定义Interceptor
+ */
 @Slf4j
 public class HttpInterceptor extends HandlerInterceptorAdapter {
 
@@ -18,8 +21,11 @@ public class HttpInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+
         RequestHolder.remove();
+
         log.info("afterCompletion");
+
         return;
     }
 }

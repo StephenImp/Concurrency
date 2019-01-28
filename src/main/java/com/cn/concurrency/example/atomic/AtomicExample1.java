@@ -9,6 +9,10 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicInteger;
 
+
+/**
+ * AtomicInteger
+ */
 @Slf4j
 @ThreadSafe
 public class AtomicExample1 {

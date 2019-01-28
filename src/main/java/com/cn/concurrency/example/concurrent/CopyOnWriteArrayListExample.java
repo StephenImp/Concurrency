@@ -11,6 +11,13 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
+/**
+ * 满足最终一致性，但不是实时的，
+ *
+ * 场景：读多写少的环境下比较适合
+ *
+ * List ---> CopyOnWriteArrayList
+ */
 @Slf4j
 @ThreadSafe
 public class CopyOnWriteArrayListExample {

@@ -11,6 +11,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
+
+/**
+ * TreeMap  --->    ConcurrentSkipListMap
+ *
+ * 并发的性能，到达一定数值后，
+ *      并发效率 会 比 ConcurrentHashMap  效率更高
+ *
+ */
 @Slf4j
 @ThreadSafe
 public class ConcurrentSkipListMapExample {

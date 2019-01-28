@@ -4,6 +4,9 @@ import com.cn.concurrency.annoations.NotThreadSafe;
 
 import java.util.Vector;
 
+/**
+ * 同步容器，出现线程不安全的问题
+ */
 @NotThreadSafe
 public class VectorExample2 {
 
@@ -17,6 +20,9 @@ public class VectorExample2 {
                 vector.add(i);
             }
 
+            /**
+             * 线程1  remove
+             */
             Thread thread1 = new Thread() {
                 public void run() {
                     for (int i = 0; i < vector.size(); i++) {
@@ -25,6 +31,9 @@ public class VectorExample2 {
                 }
             };
 
+            /**
+             * 线程2  get
+             */
             Thread thread2 = new Thread() {
                 public void run() {
                     for (int i = 0; i < vector.size(); i++) {
@@ -32,6 +41,7 @@ public class VectorExample2 {
                     }
                 }
             };
+
             thread1.start();
             thread2.start();
         }
