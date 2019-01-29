@@ -9,6 +9,7 @@ import java.util.concurrent.FutureTask;
 public class FutureTaskExample {
 
     public static void main(String[] args) throws Exception {
+
         FutureTask<String> futureTask = new FutureTask<String>(new Callable<String>() {
             @Override
             public String call() throws Exception {

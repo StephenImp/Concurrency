@@ -10,6 +10,9 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * ReentrantLock
+ */
 @Slf4j
 @ThreadSafe
 public class LockExample2 {
@@ -22,12 +25,15 @@ public class LockExample2 {
 
     public static int count = 0;
 
+    //ReentrantLock
     private final static Lock lock = new ReentrantLock();
 
     public static void main(String[] args) throws Exception {
+
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
+
         for (int i = 0; i < clientTotal ; i++) {
             executorService.execute(() -> {
                 try {
@@ -46,6 +52,7 @@ public class LockExample2 {
     }
 
     private static void add() {
+
         lock.lock();
         try {
             count++;

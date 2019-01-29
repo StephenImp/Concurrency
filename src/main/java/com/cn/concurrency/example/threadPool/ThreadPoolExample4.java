@@ -16,21 +16,31 @@ public class ThreadPoolExample4 {
 
         ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
 
+        /**
+         * 指定运行时间
+         */
 //        executorService.schedule(new Runnable() {
 //            @Override
 //            public void run() {
 //                log.warn("schedule run");
 //            }
 //        }, 3, TimeUnit.SECONDS);
+//        executorService.shutdown();
 
+        /**
+         * 延迟1秒，每隔3秒去执行
+         */
         executorService.scheduleAtFixedRate(new Runnable() {
             @Override
             public void run() {
                 log.warn("schedule run");
             }
         }, 1, 3, TimeUnit.SECONDS);
-//        executorService.shutdown();
 
+
+        /**
+         * Timer 也可以用来做延迟
+         */
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override

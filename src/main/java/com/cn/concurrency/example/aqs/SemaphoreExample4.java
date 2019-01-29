@@ -7,6 +7,14 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
+
+/**
+ * 信号量
+ *
+ * 尝试获取一个许可(可以设置等待时间)
+ *
+ * 释放一个许可
+ */
 @Slf4j
 public class SemaphoreExample4 {
 

@@ -2,9 +2,20 @@ package com.cn.concurrency.example.lock;
 
 import java.util.concurrent.locks.StampedLock;
 
+/**
+ * StampedLock
+ *
+ * 三种模式：
+ *      写，读，乐观读*
+ *
+ *      由版本和模式两个状态组成
+ *
+ *      读线程多的时候，吞吐量特别的大
+ */
 public class LockExample4 {
 
     class Point {
+
         private double x, y;
         private final StampedLock sl = new StampedLock();
 

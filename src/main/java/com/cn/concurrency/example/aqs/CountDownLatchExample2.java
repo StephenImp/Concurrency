@@ -7,6 +7,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 只关心  指定时间内 完成的
+ *
+ * countDownLatch.await(10, TimeUnit.MILLISECONDS);
+ */
 @Slf4j
 public class CountDownLatchExample2 {
 
@@ -31,8 +36,13 @@ public class CountDownLatchExample2 {
             });
         }
         countDownLatch.await(10, TimeUnit.MILLISECONDS);
-        log.info("finish");
+        log.info("@@@@@@@@@@@@@@finish@@@@@@@@@@@@@@");
+
+        /**
+         * 并不会直接关闭掉线程池，而是让当前存在在线程池中的线程运行完，再关闭
+         */
         exec.shutdown();
+
     }
 
     private static void test(int threadNum) throws Exception {

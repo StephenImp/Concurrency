@@ -6,6 +6,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
+
+/**
+ * 信号量
+ *
+ * 获取多个许可
+ *
+ * 释放多个许可
+ */
 @Slf4j
 public class SemaphoreExample2 {
 

@@ -21,10 +21,16 @@ public class FutureExample {
     }
 
     public static void main(String[] args) throws Exception {
+
         ExecutorService executorService = Executors.newCachedThreadPool();
+
         Future<String> future = executorService.submit(new MyCallable());
         log.info("do something in main");
         Thread.sleep(1000);
+
+        /**
+         * 直接的方法没有执行完的话，会阻塞在这里。
+         */
         String result = future.get();
         log.info("result：{}", result);
     }

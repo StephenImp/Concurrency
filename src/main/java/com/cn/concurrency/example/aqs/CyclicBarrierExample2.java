@@ -7,6 +7,15 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+
+/**
+ * barrier.await(2000, TimeUnit.MILLISECONDS);
+ *
+ * 注意try catch
+ *
+ * 设置时长后，想要继续执行的话，需要捕获异常。
+ *
+ */
 @Slf4j
 public class CyclicBarrierExample2 {
 

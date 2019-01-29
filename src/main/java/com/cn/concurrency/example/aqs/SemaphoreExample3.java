@@ -7,6 +7,17 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
+
+/**
+ * 信号量
+ *
+ * 尝试获取一个许可
+ *
+ * 释放一个许可
+ *
+ * 20 个线程，同一时刻同时请求，但是同一时刻只允许3个线程同时请求
+ *  其他的线程会被抛弃掉
+ */
 @Slf4j
 public class SemaphoreExample3 {
 

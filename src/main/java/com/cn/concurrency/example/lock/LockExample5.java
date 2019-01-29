@@ -9,6 +9,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.StampedLock;
 
+/**
+ * StampedLock
+ */
 @Slf4j
 @ThreadSafe
 public class LockExample5 {
@@ -24,6 +27,7 @@ public class LockExample5 {
     private final static StampedLock lock = new StampedLock();
 
     public static void main(String[] args) throws Exception {
+
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);

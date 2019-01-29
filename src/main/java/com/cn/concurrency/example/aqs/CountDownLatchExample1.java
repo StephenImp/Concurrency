@@ -36,7 +36,7 @@ public class CountDownLatchExample1 {
 
     private static void test(int threadNum) throws Exception {
         Thread.sleep(100);
-        log.info("{}", threadNum);
+        log.info("{}", "***"+threadNum);
         Thread.sleep(100);
     }
 }

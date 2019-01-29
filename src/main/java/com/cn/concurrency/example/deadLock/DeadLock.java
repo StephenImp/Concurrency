@@ -47,6 +47,7 @@ public class DeadLock implements Runnable {
     }
 
     public static void main(String[] args) {
+
         DeadLock td1 = new DeadLock();
         DeadLock td2 = new DeadLock();
         td1.flag = 1;

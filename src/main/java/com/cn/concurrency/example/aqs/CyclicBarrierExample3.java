@@ -6,6 +6,10 @@ import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+
+/**
+ * 当线程到达指定的屏障时，会优先执行Runnable
+ */
 @Slf4j
 public class CyclicBarrierExample3 {
 

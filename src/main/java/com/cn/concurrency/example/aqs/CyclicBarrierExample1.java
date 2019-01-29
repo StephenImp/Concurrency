@@ -6,6 +6,9 @@ import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * 线程间的相互等待的关系
+ */
 @Slf4j
 public class CyclicBarrierExample1 {
 
