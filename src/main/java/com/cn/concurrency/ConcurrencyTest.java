@@ -1,6 +1,7 @@
 package com.cn.concurrency;
 
 import com.cn.concurrency.annoations.NotThreadSafe;
+import com.google.common.util.concurrent.RateLimiter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.CountDownLatch;
@@ -41,6 +42,7 @@ public class ConcurrencyTest {
 
                     // 请求总数
                     semaphore.acquire();
+
                     add();
                     semaphore.release();
 
