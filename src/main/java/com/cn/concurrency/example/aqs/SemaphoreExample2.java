@@ -9,9 +9,7 @@ import java.util.concurrent.Semaphore;
 
 /**
  * 信号量
- *
  * 获取多个许可
- *
  * 释放多个许可
  */
 @Slf4j

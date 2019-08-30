@@ -9,8 +9,11 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 只关心  指定时间内 完成的
- *
  * countDownLatch.await(10, TimeUnit.MILLISECONDS);
+ *
+ * 运行时间超过10MILLISECONDS不会继续等待，不会影响主线程继续执行。
+ *
+ * https://blog.csdn.net/sidongxue2/article/details/71727768
  */
 @Slf4j
 public class CountDownLatchExample2 {

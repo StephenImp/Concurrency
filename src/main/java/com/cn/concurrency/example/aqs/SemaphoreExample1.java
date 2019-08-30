@@ -9,10 +9,8 @@ import java.util.concurrent.Semaphore;
 
 /**
  * 信号量
- *
- * 获取一个许可
- *
- * 释放一个许可
+ * 获取一个许可   semaphore.acquire()
+ * 释放一个许可   semaphore.release()
  */
 @Slf4j
 public class SemaphoreExample1 {

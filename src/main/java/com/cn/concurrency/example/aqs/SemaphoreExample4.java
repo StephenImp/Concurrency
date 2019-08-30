@@ -10,10 +10,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 信号量
- *
- * 尝试获取一个许可(可以设置等待时间)
- *
- * 释放一个许可
+ * 尝试获取一个许可(可以设置等待时间)    if (semaphore.tryAcquire(5000, TimeUnit.MILLISECONDS))
+ * 释放一个许可    semaphore.release();
  */
 @Slf4j
 public class SemaphoreExample4 {

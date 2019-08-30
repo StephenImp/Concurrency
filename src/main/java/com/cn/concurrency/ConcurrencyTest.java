@@ -42,7 +42,6 @@ public class ConcurrencyTest {
 
                     // 请求总数
                     semaphore.acquire();
-
                     add();
                     semaphore.release();
 
