@@ -12,7 +12,6 @@ public class SingletonExample7 {
 
     // 私有构造函数
     private SingletonExample7() {
-
     }
 
     public static SingletonExample7 getInstance() {

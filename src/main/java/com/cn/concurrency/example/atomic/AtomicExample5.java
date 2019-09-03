@@ -17,15 +17,15 @@ import java.util.concurrent.atomic.AtomicReference;
 @ThreadSafe
 public class AtomicExample5 {
 
-
     /**
      * 这个count  必须用  volatile  修饰 ,非 static
      */
+    @Getter
+    public volatile int count = 100;
+
     private static AtomicIntegerFieldUpdater<AtomicExample5> updater =
             AtomicIntegerFieldUpdater.newUpdater(AtomicExample5.class, "count");
 
-    @Getter
-    public volatile int count = 100;
 
     public static void main(String[] args) {
 

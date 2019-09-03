@@ -11,18 +11,12 @@ public class RateLimiterExample2 {
     // 同时并发执行的线程数
     public static int threadTotal = 50;
 
-
-
     private static RateLimiter rateLimiter = RateLimiter.create(5);
 
     public static void main(String[] args) throws Exception {
-
-
         for (int index = 0; index < 100; index++) {
-
             rateLimiter.acquire();
             handle(index);
-
         }
     }
 

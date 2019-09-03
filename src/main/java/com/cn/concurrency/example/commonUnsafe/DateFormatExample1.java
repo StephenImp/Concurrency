@@ -13,6 +13,8 @@ import java.util.concurrent.Semaphore;
  * SimpleDateFormat
  *
  * 不是线程安全的，不能被多个线程共享使用。
+ *
+ * java 8 LocalDateTime 安全的
  */
 @Slf4j
 @NotThreadSafe
